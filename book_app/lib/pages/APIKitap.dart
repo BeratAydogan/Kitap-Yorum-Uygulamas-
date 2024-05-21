@@ -38,7 +38,7 @@ final CollectionReference kitap =
       return; // Boş bir arama yapmaktan kaçının
     }
     final response = await http.get(Uri.parse(
-        'https://www.googleapis.com/books/v1/volumes?q=$searchKeyword&printType=books&key=AIzaSyDz68YEC0ib36x3d1i09TH7Eja2vk0eYmo'));
+        'YOUR_API_KEY'));
     if (response.statusCode == 200) {
       final jsonData = json.decode(response.body);
       final items = jsonData['items'];
